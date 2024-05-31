@@ -13,7 +13,7 @@ the constant increase in cyber threats, companies and organizations are seeking 
 ways to detect and prevent attacks. Honeynets offer an effective solution to trap attackers,
 gather valuable intelligence, and improve defense strategies.
 
-## Honeypot 1 Apache-Powered Honeybot Against SQL Injection
+## Honeypot 1 Apache-Powered HoneyPot Against SQL Injection
 ### Description of the Honeypot Architecture:
 The honeypot architecture was designed to mimic a real web server environment (an
 ecommerce website) while actively luring and capturing malicious activities from potential
@@ -26,3 +26,12 @@ requests and responses.
 database was set up. This database stores dummy data that the honeybot interacts
 with, giving the appearance of a functioning web application to potential attackers.
 We used Mysql
+- Logging : we used ModSecurity
+- Honeypot Modules: Within the honeybot environment, various options exist for
+deploying honeypot modules to emulate vulnerable components. In our
+implementation, we deliberately omitted input validation and sanitization techniques
+from the backend code of a deceptive search bar, making it appear susceptible to
+SQL injection attacks. This tactic aimed to lure potential attackers, who could then
+manipulate SQL queries and potentially extract sensitive data from the database.
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/bf75e8e5-9f03-44a5-9e1e-be63f9fe4d37)
