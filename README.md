@@ -79,3 +79,6 @@ web log analyzer and interactive viewer that runs in a terminal in *nix systems 
 browser.
 
 ![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/5e7cd5b3-a795-4c41-9495-0ca84d19036e)
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/21e95bd2-f7f2-4597-87fb-b9264d3e3101)
+
