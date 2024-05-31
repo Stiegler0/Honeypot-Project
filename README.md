@@ -35,3 +35,29 @@ SQL injection attacks. This tactic aimed to lure potential attackers, who could 
 manipulate SQL queries and potentially extract sensitive data from the database.
 
 ![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/bf75e8e5-9f03-44a5-9e1e-be63f9fe4d37)
+
+### Hardening Apache:
+Improving Security: The steps provided will help improve Apache’s security to a
+basic level suitable for our specific project (the honeypot web server).
+● We can mitigate risks discovered by whatweb tool by modifying a couple of the
+Apache configuration files. The first one we can modify is the
+/etc/apache2/conf-available/security.conf file which will help limit the amount of
+data that is shared about the web service. We’ll modify this file by changing the value
+for the ServerTokens directive from ‘OS’ to ‘Prod’ using the sed com
+sed -i 's/ServerTokens OS/ServerTokens Prod/' /etc/apache2/conf-available/security.conf
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/00c1200c-9b93-4a40-9ea7-f3eb29132855)
+
+● anticlickjack:
+Anticlickjacking is a security measure designed to protect websites from clickjacking attacks,
+where a malicious site overlays transparent or opaque frames to trick users into clicking on
+elements that perform unintended actions, such as changing settings or making transactions.
+We performed a sanity check by running a scan against our web server using the nikto tool
+We can see anticlickjack is not present in our server:
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/e41f8254-96b5-4e52-b0f4-384843dfc6e5)
+
+
+### Attack Scenario and Detection:
+- SQL Injection Attack: An attacker discovers our ecommerce website and begins
+searching for vulnerabilities. They attempt a SQL injection attack by submitting a
+malicious request through a search form on the site. They can use tools like: sqlmap
