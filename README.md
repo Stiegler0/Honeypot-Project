@@ -54,6 +54,7 @@ where a malicious site overlays transparent or opaque frames to trick users into
 elements that perform unintended actions, such as changing settings or making transactions.
 We performed a sanity check by running a scan against our web server using the nikto tool
 We can see anticlickjack is not present in our server:
+
 ![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/e41f8254-96b5-4e52-b0f4-384843dfc6e5)
 
 
@@ -61,3 +62,20 @@ We can see anticlickjack is not present in our server:
 - SQL Injection Attack: An attacker discovers our ecommerce website and begins
 searching for vulnerabilities. They attempt a SQL injection attack by submitting a
 malicious request through a search form on the site. They can use tools like: sqlmap
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/8958bf68-6375-419c-93fa-3775746cf6ad)
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/7bcfc9ec-8176-450d-bc7a-6fa06cd6de02)
+
+### Analysis and Response: Our administrators analyze the honeypot logs to understand
+the nature of the attack. They notice repeated attempts by the attacker to exploit SQL
+vulnerabilities. With the collected information, We can:
+● Block the attacker's IP address on our real servers.
+● Update their firewall rules to prevent similar attacks.
+● Inform their development team to further secure web forms against SQL
+injections.
+For Analysis we used goaccess tool for visualization, GoAccess is an open source real-time
+web log analyzer and interactive viewer that runs in a terminal in *nix systems or through our
+browser.
+
+![image](https://github.com/Stiegler0/Honeypot-Project/assets/145070468/5e7cd5b3-a795-4c41-9495-0ca84d19036e)
