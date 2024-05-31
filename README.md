@@ -12,3 +12,17 @@ We have chosen this topic due to its growing importance in the field of cybersec
 the constant increase in cyber threats, companies and organizations are seeking proactive
 ways to detect and prevent attacks. Honeynets offer an effective solution to trap attackers,
 gather valuable intelligence, and improve defense strategies.
+
+## Honeypot 1 Apache-Powered Honeybot Against SQL Injection
+### Description of the Honeypot Architecture:
+The honeypot architecture was designed to mimic a real web server environment (an
+ecommerce website) while actively luring and capturing malicious activities from potential
+attackers. The architecture consists of several key components:
+- Apache Server: The core component of the honeybot infrastructure is the Apache
+web server. Apache was chosen for its robustness, flexibility, and widespread usage in
+the industry. It serves as the frontend for the honeypot, handling incoming HTTP
+requests and responses.
+- Database Backend: To simulate a typical web application scenario, a backend
+database was set up. This database stores dummy data that the honeybot interacts
+with, giving the appearance of a functioning web application to potential attackers.
+We used Mysql
